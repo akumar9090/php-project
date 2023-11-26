@@ -1,0 +1,76 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>registration-Page</title>
+    <link rel="stylesheet" href="../css/stylesheet.css">
+</head>
+<body>
+    <style>
+
+    #address{
+        width: 25%;
+    }
+    #image_choose{
+        border: 2px solid black;
+        border-radius: 7px;
+        padding: 10px;
+        width: 30%;
+        
+    }
+
+    #role{
+        border: 2px solid black;
+        border-radius: 7px;
+        padding: 10px;
+        width: 30%;   
+    }
+
+    #role select{
+        padding: 10px;
+        border-radius: 7px;
+    }
+
+    </style>
+    
+    
+    
+    <h1>Online Voting System</h1>
+    <hr>
+    <h2>Registration 👇</h2>
+    <form action="../api/register.php" method="POST" enctype="multipart/form-data">
+
+        <input type="text" name="name" placeholder="Enter name"> 
+        <input type="number" name="mobile" placeholder="enter mobile number"> <br> <br>
+        <input type="password" name="password" placeholder="enter password"> 
+        <input type="password" name="cpassword" placeholder="confirm password"> <br> <br>
+        <input id="address" type="text" name="address" placeholder="enter address"> <br> <br>
+       <center>
+        <div id="imagepart">
+            Upload Image: <input type="file" name="photo"> 
+           </div>
+           <br> <br>
+       
+            <div id="role">
+                Selelct Role: <select name="role">
+                    <option value="1">Voter</option>
+                     <option value="2">Group</option>
+                 </select>
+            </div>
+          </center> <br> 
+       
+        
+        <button style="
+            padding: 5px; 
+            font-size:15px;
+            background-color:tomato;
+            color:white;
+            width:100px;
+            height:45px;
+            border-radius: 7px;">Register</button> <br> <br>
+        Already User ? <a href="../index.html">Login here</a>
+        
+    </form>
+</body>
+</html>
